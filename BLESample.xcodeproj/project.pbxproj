@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C503ECCB1DE592B0002B37BC /* CentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C503ECCA1DE592B0002B37BC /* CentralViewController.swift */; };
 		C5ED3A9F1DC8513600FF9BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED3A9E1DC8513600FF9BAF /* AppDelegate.swift */; };
 		C5ED3AA11DC8513600FF9BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED3AA01DC8513600FF9BAF /* ViewController.swift */; };
 		C5ED3AA41DC8513600FF9BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ED3AA21DC8513600FF9BAF /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C503ECCA1DE592B0002B37BC /* CentralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralViewController.swift; sourceTree = "<group>"; };
 		C5ED3A9B1DC8513600FF9BAF /* BLESample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLESample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ED3A9E1DC8513600FF9BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ED3AA01DC8513600FF9BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				C5ED3A9E1DC8513600FF9BAF /* AppDelegate.swift */,
 				C5ED3AA01DC8513600FF9BAF /* ViewController.swift */,
+				C503ECCA1DE592B0002B37BC /* CentralViewController.swift */,
 				C5ED3AA21DC8513600FF9BAF /* Main.storyboard */,
 				C5ED3AA51DC8513600FF9BAF /* Assets.xcassets */,
 				C5ED3AA71DC8513600FF9BAF /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ED3AA11DC8513600FF9BAF /* ViewController.swift in Sources */,
+				C503ECCB1DE592B0002B37BC /* CentralViewController.swift in Sources */,
 				C5ED3A9F1DC8513600FF9BAF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,7 @@
 				C5ED3AAF1DC8513600FF9BAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
