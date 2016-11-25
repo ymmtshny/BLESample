@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C503ECCB1DE592B0002B37BC /* CentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C503ECCA1DE592B0002B37BC /* CentralViewController.swift */; };
+		C503ECCB1DE592B0002B37BC /* MultipeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C503ECCA1DE592B0002B37BC /* MultipeerViewController.swift */; };
+		C503ECCD1DE71FA3002B37BC /* MultipeerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C503ECCC1DE71FA3002B37BC /* MultipeerViewController.storyboard */; };
+		C503ECCF1DE7201C002B37BC /* ColorServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C503ECCE1DE7201C002B37BC /* ColorServiceManager.swift */; };
+		C5DC01031DE73D0300E96AFB /* Slice1.png in Resources */ = {isa = PBXBuildFile; fileRef = C5DC01021DE73D0300E96AFB /* Slice1.png */; };
 		C5ED3A9F1DC8513600FF9BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED3A9E1DC8513600FF9BAF /* AppDelegate.swift */; };
 		C5ED3AA11DC8513600FF9BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5ED3AA01DC8513600FF9BAF /* ViewController.swift */; };
 		C5ED3AA41DC8513600FF9BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5ED3AA21DC8513600FF9BAF /* Main.storyboard */; };
@@ -16,7 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C503ECCA1DE592B0002B37BC /* CentralViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CentralViewController.swift; sourceTree = "<group>"; };
+		C503ECCA1DE592B0002B37BC /* MultipeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerViewController.swift; sourceTree = "<group>"; };
+		C503ECCC1DE71FA3002B37BC /* MultipeerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipeerViewController.storyboard; sourceTree = "<group>"; };
+		C503ECCE1DE7201C002B37BC /* ColorServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorServiceManager.swift; sourceTree = "<group>"; };
+		C5DC01021DE73D0300E96AFB /* Slice1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slice1.png; sourceTree = "<group>"; };
 		C5ED3A9B1DC8513600FF9BAF /* BLESample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLESample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5ED3A9E1DC8513600FF9BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5ED3AA01DC8513600FF9BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,9 +64,12 @@
 			children = (
 				C5ED3A9E1DC8513600FF9BAF /* AppDelegate.swift */,
 				C5ED3AA01DC8513600FF9BAF /* ViewController.swift */,
-				C503ECCA1DE592B0002B37BC /* CentralViewController.swift */,
+				C503ECCA1DE592B0002B37BC /* MultipeerViewController.swift */,
+				C503ECCC1DE71FA3002B37BC /* MultipeerViewController.storyboard */,
+				C503ECCE1DE7201C002B37BC /* ColorServiceManager.swift */,
 				C5ED3AA21DC8513600FF9BAF /* Main.storyboard */,
 				C5ED3AA51DC8513600FF9BAF /* Assets.xcassets */,
+				C5DC01021DE73D0300E96AFB /* Slice1.png */,
 				C5ED3AA71DC8513600FF9BAF /* LaunchScreen.storyboard */,
 				C5ED3AAA1DC8513600FF9BAF /* Info.plist */,
 			);
@@ -130,6 +139,8 @@
 				C5ED3AA91DC8513600FF9BAF /* LaunchScreen.storyboard in Resources */,
 				C5ED3AA61DC8513600FF9BAF /* Assets.xcassets in Resources */,
 				C5ED3AA41DC8513600FF9BAF /* Main.storyboard in Resources */,
+				C5DC01031DE73D0300E96AFB /* Slice1.png in Resources */,
+				C503ECCD1DE71FA3002B37BC /* MultipeerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5ED3AA11DC8513600FF9BAF /* ViewController.swift in Sources */,
-				C503ECCB1DE592B0002B37BC /* CentralViewController.swift in Sources */,
+				C503ECCB1DE592B0002B37BC /* MultipeerViewController.swift in Sources */,
 				C5ED3A9F1DC8513600FF9BAF /* AppDelegate.swift in Sources */,
+				C503ECCF1DE7201C002B37BC /* ColorServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

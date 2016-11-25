@@ -40,6 +40,8 @@ class ViewController: UIViewController,
         
         //centralManager初期化
         self.centralManager = CBCentralManager(delegate:self, queue:nil)
+        
+        
     }
     
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
@@ -61,19 +63,26 @@ class ViewController: UIViewController,
                         rssi RSSI: NSNumber) {
         print("検出したデバイス \(peripheral)")
         
-        var shouldAppend = true
-        for device in deviceArray {
-            if(device == peripheral) {
-                shouldAppend = false
+//        var shouldAppend = true
+//        for device in deviceArray {
+//            if(device.identifier.uuidString == peripheral.identifier.uuidString) {
+//                shouldAppend = false
+//                
+//            }
+//        }
+//        if shouldAppend {
+//            self.deviceArray.append(peripheral)
+//            self.tableView.reloadData()
+//        }
+        
+        //macbook air 10E96671-E2B2-41FC-85BA-35CF006970F2
+        if(peripheral.identifier.uuidString == "10E96671-E2B2-41FC-85BA-35CF006970F2") {
+            if self.deviceArray.count == 0 {
+                peripheral.delegate = self
+                self.deviceArray.append(peripheral)
             }
-        }
-        if shouldAppend {
-            self.deviceArray.append(peripheral)
             self.tableView.reloadData()
         }
-        
-        
-        
     }
     
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Xcode 8.0" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Comment" representedClassName="" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="community_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="post_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Community" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="required_approval_flag" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="show_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Member" syncable="YES"/>
+    </entity>
+    <entity name="Cultivation" syncable="YES">
+        <attribute name="end_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latest_soil_moisture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latest_sunlight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latest_temperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_soil_moisture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_sunlight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_temperature" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" syncable="YES"/>
+    </entity>
+    <entity name="CultivationNotification" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cultivation_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="occurrence_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="planter_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="CultivationStage" syncable="YES">
+        <attribute name="end_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="start_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_soil_moisture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total_temperature" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="plant_stage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlantStage" syncable="YES"/>
+    </entity>
+    <entity name="Like" syncable="YES">
+        <attribute name="community_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="post_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Member" syncable="YES">
+        <attribute name="admin_flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="approval_flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="community_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Picture" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Plant" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Planter" syncable="YES">
+        <attribute name="activate_user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="activated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="active_flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="altitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="owner_user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="serial_code" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="activate_use" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="cultivation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cultivation" syncable="YES"/>
+        <relationship name="cultivation_stages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CultivationStage" syncable="YES"/>
+        <relationship name="owner_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <relationship name="planter_members" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="PlantStage" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phase" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Post" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="public_flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Comment" syncable="YES"/>
+        <relationship name="likes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Like" syncable="YES"/>
+        <relationship name="pictures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Picture" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
+        <fetchedProperty name="community_id" optional="YES" syncable="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="Post"/>
+        </fetchedProperty>
+        <fetchedProperty name="user_id" optional="YES" syncable="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="Post"/>
+        </fetchedProperty>
+    </entity>
+    <entity name="Tag" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="active_flag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Weather" syncable="YES">
+        <attribute name="forecast" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="get_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="target_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="target_hour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="target_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wind_direction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wind_speed" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Weather" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Comment" positionX="801" positionY="413" width="153" height="163"/>
+        <element name="Community" positionX="702" positionY="-457" width="128" height="178"/>
+        <element name="Cultivation" positionX="-155" positionY="18" width="128" height="193"/>
+        <element name="CultivationNotification" positionX="-414" positionY="18" width="126" height="148"/>
+        <element name="CultivationStage" positionX="34" positionY="20" width="128" height="133"/>
+        <element name="Like" positionX="322" positionY="432" width="128" height="148"/>
+        <element name="Member" positionX="709" positionY="-226" width="128" height="163"/>
+        <element name="Planter" positionX="-47" positionY="-387" width="128" height="268"/>
+        <element name="PlantStage" positionX="45" positionY="261" width="128" height="88"/>
+        <element name="Post" positionX="288" positionY="36" width="128" height="221"/>
+        <element name="User" positionX="448" positionY="-223" width="128" height="133"/>
+        <element name="Weather" positionX="-261" positionY="-387" width="128" height="238"/>
+        <element name="Picture" positionX="180" positionY="431" width="128" height="73"/>
+        <element name="Tag" positionX="27" positionY="422" width="128" height="73"/>
+        <element name="Plant" positionX="-135" positionY="257" width="128" height="103"/>
+    </elements>
+</model>

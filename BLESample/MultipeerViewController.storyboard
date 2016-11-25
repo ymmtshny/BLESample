@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2kb-tp-3WJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Multipeer View Controller-->
+        <scene sceneID="fb6-7m-bmR">
+            <objects>
+                <viewController id="2kb-tp-3WJ" customClass="MultipeerViewController" customModule="BLESample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PU8-sW-wLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cKD-nz-L01"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gvC-Fa-aKW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-Zn-p7u">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FhE-Xa-l6J"/>
+                                    <constraint firstAttribute="width" constant="46" id="zwm-rc-4w0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="willconnect:" destination="2kb-tp-3WJ" eventType="touchUpInside" id="Ex8-G1-8aM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I2j-P1-efy">
+                                <rect key="frame" x="117" y="108" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="K09-Bc-s9C"/>
+                                    <constraint firstAttribute="width" constant="140" id="c5J-bm-e24"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nLX-Yl-nZd">
+                                <rect key="frame" x="36" y="368" width="303" height="279"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nVh-Zn-p7u" firstAttribute="top" secondItem="I2j-P1-efy" secondAttribute="bottom" constant="70.5" id="1re-iY-maX"/>
+                            <constraint firstItem="I2j-P1-efy" firstAttribute="centerX" secondItem="gvC-Fa-aKW" secondAttribute="centerX" id="D97-j3-4m4"/>
+                            <constraint firstItem="nVh-Zn-p7u" firstAttribute="centerX" secondItem="gvC-Fa-aKW" secondAttribute="centerX" id="Hv8-E3-1QY"/>
+                            <constraint firstItem="nLX-Yl-nZd" firstAttribute="top" secondItem="nVh-Zn-p7u" secondAttribute="bottom" constant="20" id="MDy-8l-FPQ"/>
+                            <constraint firstItem="nVh-Zn-p7u" firstAttribute="centerY" secondItem="gvC-Fa-aKW" secondAttribute="centerY" id="U9G-I2-lkh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nLX-Yl-nZd" secondAttribute="trailing" constant="20" id="YpW-sS-JOV"/>
+                            <constraint firstItem="nLX-Yl-nZd" firstAttribute="leading" secondItem="gvC-Fa-aKW" secondAttribute="leadingMargin" constant="20" id="a86-bA-wxM"/>
+                            <constraint firstItem="cKD-nz-L01" firstAttribute="top" secondItem="nLX-Yl-nZd" secondAttribute="bottom" constant="20" id="mK3-YC-ijJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="I2j-P1-efy" id="jrb-q6-9OB"/>
+                        <outlet property="textView" destination="nLX-Yl-nZd" id="4eZ-0h-kZn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3l7-pk-w0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2410" y="-532"/>
+        </scene>
+    </scenes>
+</document>
